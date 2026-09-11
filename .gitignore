@@ -1,0 +1,6 @@
+.DS_Store
+.sites-runtime/
+.openai/
+
+
+Adiciona gitignore
