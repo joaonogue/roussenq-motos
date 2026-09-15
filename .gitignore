@@ -1,6 +1,8 @@
+node_modules/
+dist/
+.ssr/
+.env
+.env.*
+!.env.example
 .DS_Store
 .sites-runtime/
-.openai/
-
-
-Adiciona gitignore

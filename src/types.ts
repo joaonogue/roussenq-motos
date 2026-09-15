@@ -1,0 +1,23 @@
+export type Moto = {
+  id: string;
+  slug: string;
+  marca: string;
+  modelo: string;
+  versao: string;
+  ano: number;
+  anoModelo: number;
+  quilometragem: number;
+  cilindrada: number;
+  cor: string;
+  combustivel: string;
+  cambio: string;
+  preco: number;
+  condicao: string;
+  status: string;
+  featured: boolean;
+  demo: boolean;
+  descricao: string;
+  destaques: string[];
+  imagens: string[];
+  createdAt: string;
+};
