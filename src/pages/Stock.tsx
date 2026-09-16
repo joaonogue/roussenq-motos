@@ -131,7 +131,7 @@ export function Stock({ motos }: { motos: Moto[] }) {
       <div className="page-heading">
         <p className="eyebrow">ESTOQUE / ROUSSENQ MOTOS</p>
         <h1>
-          O seu próximo capítulo<span className="heading-period">.</span>
+          Catálogo de motos<span className="heading-period">.</span>
         </h1>
       </div>
       <div className="search-row">

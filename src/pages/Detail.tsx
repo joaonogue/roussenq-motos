@@ -83,7 +83,7 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
         <div className="detail-title">
           <div>
             <p className="eyebrow">
-              {moto.demo ? "COLEÇÃO CONCEITO" : moto.marca} / {moto.versao}
+              {moto.demo ? "Exemplo" : moto.marca} / {moto.versao}
             </p>
             <h1>
               {moto.modelo}
@@ -146,7 +146,7 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
         </div><div className="detail-body">
           <section>
             <p className="eyebrow">01 / EM DETALHES</p>
-            <h2>Conheça a máquina.</h2>
+            <h2>Sobre esta moto</h2>
             <p className="description">{moto.descricao}</p>
             {moto.destaques.length > 0 && (
               <ul className="highlights">
@@ -175,7 +175,7 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
           <div className="section-heading">
             <div>
               <p className="eyebrow">CONTINUE EXPLORANDO</p>
-              <h2>Outras máquinas.</h2>
+              <h2>Outras motos</h2>
             </div>
             <a className="text-link" href={href("estoque/")}>
               Ver estoque completo ↗
