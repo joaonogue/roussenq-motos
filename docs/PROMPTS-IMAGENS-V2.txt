@@ -1,0 +1,31 @@
+Built-in imagegen; exactly two outputs; both 1536x1024. Conceptual demonstration imagery, not actual inventory.
+
+HERO
+Use case: product-mockup
+Asset type: editorial concept photograph for ROUSSENQ MOTOS demonstration website; purely conceptual, not actual inventory.
+Primary request: Premium realistic editorial studio photograph of an unbranded green and black contemporary sport motorcycle.
+Scene/backdrop: dark graphite seamless hangar studio with dark matte floor.
+Composition/framing: landscape 1536x1024, entire motorcycle including both complete wheels visible, facing left in three-quarter side view, motorcycle centered-right, left 30% mostly black clean negative space for later HTML typography.
+Lighting/mood: restrained dramatic studio lighting, subtle rim light clearly revealing green paint and metal, product clearly visible.
+Materials/textures: realistic glossy deep green paint, matte black body details, metal hardware and rubber tires.
+Constraints: no lettering, no logos, no watermark, no UI, no smoke, no neon, no people. No typography inside image.
+
+DETAIL
+Use case: product-mockup
+Asset type: complementary editorial motorcycle detail concept photograph for demonstration site, not actual inventory.
+Input image: reference image 1 defines the exact conceptual motorcycle, its green and black materials, front headlight geometry, tank, and graphite studio.
+Primary request: Create a separate closer detailed studio photograph of the SAME motorcycle, framing its front headlight, front fairing, handlebar and sculpted green tank together in a refined three-quarter detail view. Preserve the motorcycle design and deep metallic green color, matte black elements and realistic metal from the reference. This is a new camera framing of the same subject.
+Composition: landscape 1536x1024, close crop focused on front headlight and tank, premium editorial composition.
+Lighting: matching dark graphite seamless studio and restrained soft rim lighting that clearly reveals materials. Photorealistic.
+Constraints: no lettering, brand logos, watermarks, UI, people, smoke or neon. Do not add text.
+
+
+NAKED 02
+Use case: product-mockup
+Asset type: explicitly fictional concept motorcycle photograph for a demonstration website, not actual inventory.
+Primary request: Premium editorial photograph of a full unbranded black contemporary naked street motorcycle, entire bike including both wheels fully visible, facing left in a three-quarter side view.
+Scene/backdrop: charcoal graphite seamless studio and matte dark floor, matching a premium sport motorcycle editorial shoot.
+Composition: landscape 1536x1024; motorcycle fills about 80 percent of image width, centered with little empty area and comfortable margins around both wheels.
+Lighting/mood: subtle white rim lighting and controlled studio softboxes, clearly visible black body and sharp realistic metallic engine, fork and hardware details. Restrained, realistic and refined.
+Materials: black bodywork, exposed mechanical components, realistic metal and rubber.
+Constraints: no logos, no text, no lettering, no watermark, no UI, no people, no smoke, no neon. Concept imagery only.

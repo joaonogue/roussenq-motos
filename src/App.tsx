@@ -133,8 +133,8 @@ function Home() {
       <section className="hero" ref={hero}>
         <img
           className="hero-photo"
-          src={href("assets/editorial/hero.webp")}
-          srcSet={`${href("assets/editorial/hero-640.webp")} 640w, ${href("assets/editorial/hero.webp")} 1600w`}
+          src={href("assets/editorial/hero-v2.webp")}
+          srcSet={`${href("assets/editorial/hero-v2-640.webp")} 640w, ${href("assets/editorial/hero-v2.webp")} 1600w`}
           sizes="100vw"
           alt="Motocicleta esportiva verde e preta — fotografia editorial ilustrativa"
           width="1600"
@@ -144,10 +144,10 @@ function Home() {
         <div className="hero-shade" />
         <div className="hero-kicker">
           <span>IMARUÍ, SANTA CATARINA</span>
-          <span>INDEPENDENTE. POR ESCOLHA.</span>
+          <span>ROUSSENQ / MOTOCICLETAS</span>
         </div>
         <div className="hero-copy">
-          <p className="eyebrow">ROUSSENQ MOTOS</p>
+          <p className="eyebrow">SEU PRÓXIMO MOVIMENTO</p>
           <h1>
             Máquinas.
             <br />
@@ -161,7 +161,7 @@ function Home() {
         </div>
         <div className="hero-bottom">
           <div>
-            <p>A próxima escolha tem a sua assinatura.</p>
+            <p>Escolha com o olhar. Conheça nos detalhes.</p>
             <a className="button primary" href={href("estoque/")}>
               Explorar estoque <span>↗</span>
             </a>
@@ -169,9 +169,7 @@ function Home() {
           <div className="hero-footnote">
             <span>01 — SPORT</span>
             <p>
-              Fotografia ilustrativa
-              <br />
-              Explore nossa apresentação.
+              Imagem conceitual · esportiva
             </p>
           </div>
           <a
@@ -184,7 +182,7 @@ function Home() {
         </div>
       </section>
       <div className="brand-strip">
-        <span>SELEÇÃO. PRESENÇA. MOVIMENTO.</span>
+        <span>UM NOVO OLHAR SOBRE DUAS RODAS.</span>
         <p>
           ROUSSENQ MOTOS <i /> IMARUÍ — SC
         </p>
@@ -194,13 +192,11 @@ function Home() {
           <div>
             <p className="eyebrow">01 / EM FOCO</p>
             <h2>
-              Algumas máquinas
-              <br />
-              pedem um <em>segundo olhar.</em>
+              Em destaque<span className="heading-period">.</span>
             </h2>
           </div>
           <a className="text-link" href={href("estoque/")}>
-            Explorar todo o estoque ↗
+            Ver o catálogo completo ↗
           </a>
         </div>
         <div className="featured-grid">
@@ -215,25 +211,14 @@ function Home() {
         <div className="wrap manifesto-inner">
           <div>
             <p className="eyebrow">02 / A NOSSA ASSINATURA</p>
-            <span className="manifesto-monogram" aria-hidden="true">
-              R.
-            </span>
+            <div className="location-sign"><span>IMARUÍ</span><small>SANTA CATARINA / BRASIL</small></div>
           </div>
           <div>
             <h2>
-              A moto chama
-              <br />a atenção.
-              <br />
-              <em>
-                A conversa
-                <br />
-                faz a diferença.
-              </em>
+              Uma escolha pessoal.<br/><em>Uma conversa de perto.</em>
             </h2>
             <p>
-              Somos a Roussenq Motos, uma revenda de motocicletas em Imaruí,
-              Santa Catarina. Um contato direto para falar de motos, entender
-              sua escolha e conhecer o que está no estoque.
+              A Roussenq Motos é de Imaruí, Santa Catarina. Aqui, o catálogo aproxima o primeiro olhar da conversa com a equipe. Veja os detalhes de cada moto e fale diretamente com quem vai atender você.
             </p>
             <a
               className="text-link"
@@ -247,17 +232,7 @@ function Home() {
         </div>
       </section>
       <section className="experience wrap reveal">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">03 / DO PRIMEIRO OLHAR À CONVERSA</p>
-            <h2>
-              Menos distância.
-              <br />
-              <em>Mais contato.</em>
-            </h2>
-          </div>
-        </div>
-        <div className="steps">
+        <p className="eyebrow experience-label">DO CATÁLOGO À CONVERSA</p><div className="steps">
           <article>
             <span>01</span>
             <h3>Explore com calma.</h3>
@@ -284,9 +259,7 @@ function Home() {
           <div>
             <p className="eyebrow">04 / OUTROS CAMINHOS</p>
             <h2>
-              O seu estilo.
-              <br />
-              <em>A sua máquina.</em>
+              Outras perspectivas.
             </h2>
           </div>
           <a className="text-link" href={href("estoque/")}>
@@ -304,11 +277,7 @@ function Home() {
         <div className="wrap">
           <p className="eyebrow">ROUSSENQ MOTOS / IMARUÍ — SC</p>
           <h2>
-            Uma boa escolha
-            <br />
-            começa com uma
-            <br />
-            <em>boa conversa.</em>
+            Vamos falar<br/><em>de motos?</em>
           </h2>
           <a
             className="contact-link"
@@ -360,6 +329,7 @@ export function App({
   return (
     <>
       <Header route={route} />
+      {config.demo && <aside className="preview-note" aria-label="Aviso de demonstração"><span>APRESENTAÇÃO CONCEITUAL</span><p>Imagens ilustrativas e valores fictícios. Não são ofertas de venda.</p></aside>}
       {route === "" ? (
         <Home />
       ) : route === "estoque" || moto ? (
@@ -390,12 +360,6 @@ export function App({
         </a>
         <small>© {new Date().getFullYear()} ROUSSENQ MOTOS</small>
       </footer>
-      {config.demo && (
-        <div className="demo-banner">
-          PRÉVIA DEMONSTRATIVA{" "}
-          <span>Catálogo com dados fictícios e fotos ilustrativas.</span>
-        </div>
-      )}
     </>
   );
 }

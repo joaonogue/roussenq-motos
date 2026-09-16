@@ -26,7 +26,7 @@ export function MotoCard({ moto, index = 0 }: { moto: Moto; index?: number }) {
           height="1067"
         />
         <span className={`status ${moto.status}`}>
-          {statusLabel[moto.status]}
+          {moto.demo ? `${statusLabel[moto.status]} · exemplo` : statusLabel[moto.status]}
         </span>
         <span className="image-index">
           {String(index + 1).padStart(2, "0")} / ROUSSENQ
@@ -36,7 +36,7 @@ export function MotoCard({ moto, index = 0 }: { moto: Moto; index?: number }) {
       <div className="moto-info">
         <div>
           <p className="eyebrow">
-            {moto.marca} <span>/ {moto.versao}</span>
+            {moto.demo ? "COLEÇÃO CONCEITO" : moto.marca} <span>/ {moto.versao}</span>
           </p>
           <h3>
             <a href={href(`motos/${moto.slug}/`)}>{moto.modelo}</a>
@@ -47,15 +47,10 @@ export function MotoCard({ moto, index = 0 }: { moto: Moto; index?: number }) {
           </p>
         </div>
         <div className="card-price">
-          <small>{moto.demo ? "Preço demonstrativo" : "Valor"}</small>
+          <small>{moto.demo ? "Valor ilustrativo" : "Valor"}</small>
           <strong>{money(moto.preco)}</strong>
         </div>
       </div>
-      {moto.demo && (
-        <p className="demo-caption">
-          Exemplo de catálogo · dados fictícios · foto ilustrativa
-        </p>
-      )}
     </article>
   );
 }

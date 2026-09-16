@@ -17,11 +17,11 @@
     "status": "disponivel",
     "featured": true,
     "demo": true,
-    "descricao": "Exemplo de cadastro para demonstrar a apresentação de uma esportiva. Os dados e o preço são fictícios; a fotografia é ilustrativa e não representa uma oferta da Roussenq Motos. Substitua este texto por uma descrição específica da moto real.",
-    "destaques": ["Exemplo: manual", "Exemplo: chave reserva"],
+    "descricao": "Estudo de uma esportiva em verde e preto: carenagens marcadas, postura baixa e presença visual. Esta moto é um conceito ilustrativo. Ano, quilometragem, cilindrada, condição, status e valor são exemplos para apresentação do catálogo.",
+    "destaques": [],
     "imagens": [
-      "assets/motos/sport-01/01.webp",
-      "assets/motos/sport-01/02.webp"
+      "assets/motos/sport-01/studio-01.webp",
+      "assets/motos/sport-01/studio-02.webp"
     ],
     "createdAt": "2026-09-15"
   },
@@ -43,9 +43,11 @@
     "status": "reservada",
     "featured": true,
     "demo": true,
-    "descricao": "Cadastro demonstrativo de uma naked. Fotografia ilustrativa, especificações e preço fictícios. Este espaço receberá a descrição escrita pela equipe para a motocicleta real.",
+    "descricao": "Uma interpretação do estilo naked, com a mecânica à vista e linhas compactas. Imagem conceitual ilustrativa; ano, quilometragem, cilindrada, condição, status e valor são exemplos, sem vínculo com uma unidade à venda.",
     "destaques": [],
-    "imagens": ["assets/motos/naked-02/01.webp"],
+    "imagens": [
+      "assets/motos/naked-02/studio-01.webp"
+    ],
     "createdAt": "2026-09-14"
   },
   {
@@ -66,9 +68,11 @@
     "status": "vendida",
     "featured": false,
     "demo": true,
-    "descricao": "Exemplo de uma motocicleta marcada como vendida. Fotografia ilustrativa, dados fictícios e nenhuma oferta comercial. O contato desta página permite consultar outras opções, sem sugerir que esta unidade está disponível.",
+    "descricao": "Silhueta longa e uma proposta visual voltada à estrada. Fotografia ilustrativa; os dados e o status de vendida demonstram como o histórico de uma unidade aparece no catálogo. Não representam uma negociação real.",
     "destaques": [],
-    "imagens": ["assets/motos/road-03/01.webp"],
+    "imagens": [
+      "assets/motos/road-03/01.webp"
+    ],
     "createdAt": "2026-09-13"
   }
 ]

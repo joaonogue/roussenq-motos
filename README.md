@@ -80,7 +80,7 @@ No JSON, os caminhos não incluem `public/` nem começam com `/`:
 
 Para cada foto, inclua uma versão de 640 px com sufixo `-640`, como `01-640.webp`. Ela é usada em telas pequenas e miniaturas. As imagens principais e as versões menores já estão preparadas nos exemplos. Preserve o enquadramento ao reduzir. A primeira foto é a capa do catálogo e a imagem de compartilhamento da página.
 
-Na demonstração Sport 01, a segunda posição repete a fotografia para permitir experimentar a navegação; substitua pelas diferentes vistas da unidade real. Nas demais, existe uma foto, então as setas ficam desativadas.
+Na demonstração Sport 01, a galeria apresenta duas imagens conceituais geradas por IA: a vista completa e um detalhe. Elas não documentam uma unidade real. Nas demais, existe uma foto, então as setas ficam desativadas.
 
 ## Como marcar como vendida ou reservada
 

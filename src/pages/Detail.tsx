@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Moto } from "../types";
 import { Gallery } from "../components/Gallery";
 import { MotoCard, statusLabel } from "../components/MotoCard";
@@ -6,6 +6,26 @@ import { href, money, number, whatsapp } from "../services/site";
 export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
   const [shareStatus, setShareStatus] = useState(""),
     [shareFallback, setShareFallback] = useState(false);
+  const contact = useRef<HTMLAnchorElement>(null);
+  const [stickyContact, setStickyContact] = useState(false);
+  useEffect(() => {
+    if (!contact.current) return;
+    let frame = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        setStickyContact((contact.current?.getBoundingClientRect().bottom ?? 0) < 0);
+      });
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
   const sold = moto.status === "vendida";
   const message = moto.demo
     ? `Olá! Vi a apresentação demonstrativa da ${moto.modelo} ${moto.anoModelo} no site da Roussenq Motos. Quais motos estão disponíveis no estoque real?`
@@ -15,7 +35,7 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
   const cta = sold
     ? "Consultar outras opções"
     : moto.demo
-      ? "Consultar estoque real"
+      ? "Falar com a Roussenq"
       : moto.status === "reservada"
         ? "Consultar reserva"
         : "Tenho interesse";
@@ -63,7 +83,7 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
         <div className="detail-title">
           <div>
             <p className="eyebrow">
-              {moto.marca} / {moto.versao}
+              {moto.demo ? "COLEÇÃO CONCEITO" : moto.marca} / {moto.versao}
             </p>
             <h1>
               {moto.modelo}
@@ -71,16 +91,10 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
             </h1>
           </div>
           <span className={`status ${moto.status}`}>
-            {statusLabel[moto.status]}
+            {moto.demo ? `${statusLabel[moto.status]} · exemplo` : statusLabel[moto.status]}
           </span>
         </div>
-        {moto.demo && (
-          <p className="detail-demo">
-            UNIDADE DEMONSTRATIVA — dados e preço fictícios. Fotografias
-            ilustrativas; não é uma oferta comercial.
-          </p>
-        )}
-        <Gallery moto={moto} />
+        <div className="detail-stage"><Gallery moto={moto} />
         <div className="detail-overview">
           <div className="detail-key-specs">
             <div>
@@ -101,9 +115,11 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
             </div>
           </div>
           <div className="detail-price">
-            <small>{moto.demo ? "Preço demonstrativo" : "Valor da moto"}</small>
+            <small>{moto.demo ? "Valor ilustrativo" : "Valor da moto"}</small>
             <strong>{money(moto.preco)}</strong>
+            {moto.demo && <p className="price-note">Exemplo de apresentação, sem oferta comercial.</p>}
             <a
+              ref={contact}
               className={`button ${sold ? "outline" : "primary"}`}
               href={whatsapp(message)}
               target="_blank"
@@ -127,7 +143,7 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
             )}
           </div>
         </div>
-        <div className="detail-body">
+        </div><div className="detail-body">
           <section>
             <p className="eyebrow">01 / EM DETALHES</p>
             <h2>Conheça a máquina.</h2>
@@ -175,9 +191,9 @@ export function Detail({ moto, motos }: { moto: Moto; motos: Moto[] }) {
           </div>
         </section>
       </div>
-      <div className="mobile-interest">
+      <div className={`mobile-interest ${stickyContact ? "is-visible" : ""}`}>
         <div>
-          <small>{moto.demo ? "Valor demonstrativo" : "Valor"}</small>
+          <small>{moto.demo ? "Valor ilustrativo" : "Valor"}</small>
           <strong>{money(moto.preco)}</strong>
         </div>
         <a

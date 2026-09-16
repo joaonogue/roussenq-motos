@@ -26,3 +26,15 @@ Não foi atribuída nota Lighthouse: o ambiente da prévia não corresponde à h
 ## Estado de entrega
 
 Projeto local preparado para GitHub. Sem publicação, domínio ou repositório remoto configurado. O destino do GitHub e os dados/fotos reais do estoque ainda precisam ser fornecidos. O modo de demonstração permanece ligado e não indexável.
+
+## Revisão da versão 2 — 15/09/2026
+
+- Novo build aprovado em raiz e em /roussenq-motos/; 6 páginas e 169 referências locais verificadas.
+- Os 5 testes de catálogo passaram novamente.
+- Home e estoque conferidos visualmente a 390 px; primeira moto visível na primeira tela do estoque.
+- Busca sem resultado e limpeza verificadas; navegação para Sport concluída.
+- Segunda imagem distinta, ampliação e fechamento por Escape conferidos.
+- Corrigida a barra mobile para aparecer também após saltos grandes de rolagem; estado visível confirmado no navegador.
+- Desktop revisado a 1440 px. Sem publicação desta revisão no GitHub Pages.
+
+As medidas de peso da primeira entrega acima são históricas. A versão 2 possui novas imagens conceituais e conserva os assets anteriores. Fotos e dados reais continuam pendentes por decisão do usuário; a apresentação demonstrativa está pronta para revisão.

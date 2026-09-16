@@ -114,13 +114,6 @@ export function Gallery({ moto }: { moto: Moto }) {
             />
           </button>
         ))}
-        {moto.demo && (
-          <p>
-            Fotografias ilustrativas.
-            <br />
-            Não representam uma unidade à venda.
-          </p>
-        )}
       </div>
       <dialog
         ref={dialog}

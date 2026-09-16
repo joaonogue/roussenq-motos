@@ -13,3 +13,9 @@ Fontes: Barlow Condensed (Jeremy Tribby) e Manrope (Mikhail Sharanda), distribu�
 [Licença Pexels](https://www.pexels.com/license/) · [Licença Unsplash](https://unsplash.com/license/). Uso em websites permitido; as marcas das motocicletas permanecem de seus respectivos titulares.
 
 Marca Roussenq: referência fornecida pelo usuário. Versão do símbolo limpa por ferramenta de geração de imagem integrada, combinada com lettering de interface. Nenhuma afiliação com fabricantes foi acrescentada.
+
+## Imagens da versão 2
+
+Hero, Sport 01 (vista completa e detalhe) e Naked 02 foram substituídos por imagens conceituais geradas pela ferramenta de imagem integrada. Não são fotografias de estoque real. Prompts: `PROMPTS-IMAGENS-V2.txt`.
+
+Arquivos em uso: `assets/editorial/hero-v2.webp`, `assets/motos/sport-01/studio-01.webp`, `studio-02.webp` e `assets/motos/naked-02/studio-01.webp`, com versões de 640 px. Os créditos da tabela acima referentes a Hero/Sport e Naked documentam os arquivos da primeira versão, preservados na pasta de assets. Road 03 continua usando a fotografia creditada acima.

@@ -129,11 +129,9 @@ export function Stock({ motos }: { motos: Moto[] }) {
   return (
     <main id="main" className="stock-page wrap">
       <div className="page-heading">
-        <p className="eyebrow">ROUSSENQ / SHOWROOM DIGITAL</p>
+        <p className="eyebrow">ESTOQUE / ROUSSENQ MOTOS</p>
         <h1>
-          Escolha o seu
-          <br />
-          <em>próximo movimento.</em>
+          O seu próximo capítulo<span className="heading-period">.</span>
         </h1>
       </div>
       <div className="search-row">
@@ -218,7 +216,7 @@ export function Stock({ motos }: { motos: Moto[] }) {
           className="button primary"
           onClick={() => panel.current?.close()}
         >
-          Ver {found.length} resultados →
+          Ver {found.length} {found.length === 1 ? "resultado" : "resultados"} →
         </button>
       </dialog>
     </main>
